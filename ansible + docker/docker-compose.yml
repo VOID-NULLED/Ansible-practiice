@@ -1,0 +1,14 @@
+version: '3.8'
+services:
+  nginx:
+    image: nginx:latest
+    ports:
+      - "80:80"
+    volumes:
+      - /opt/docker/nginx/html:/usr/share/nginx/html
+  apache:
+    image: httpd:latest
+    ports:
+      - "8080:80"
+    volumes:
+      - /opt/docker/apache/html:/usr/local/apache2/htdocs
